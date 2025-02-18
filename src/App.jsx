@@ -40,6 +40,17 @@ function App() {
           "400px 400px, 400px 300px, 350px 300px, 400px 300px, cover",
       }}
     >
+      <style>
+        {`
+      /* Remove background image on screens smaller than 640px */
+      @media (max-width: 850px) {
+        .bg-cover {
+          background-image: none !important;
+          background-color: grey;
+        }
+      }
+    `}
+      </style>
       <div className="w-full">
         <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
           <form
